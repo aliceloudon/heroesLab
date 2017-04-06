@@ -18,6 +18,10 @@ Hero.prototype = {
       this.health = this.health + food.replenishmentValue
     }
     return this.health
+  },
+
+  addTask: function(task){
+    this.tasks.push(task)
   }
 
 }
