@@ -13,4 +13,8 @@ describe('hero', function(){
     assert.strictEqual( hero.name , "Superman" );
   })
 
+  it('has health', function(){
+    assert.strictEqual(hero.health, 9001)
+  })
+
 })
