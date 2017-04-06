@@ -22,6 +22,12 @@ Hero.prototype = {
 
   addTask: function(task){
     this.tasks.push(task)
+  },
+
+  sortTasks: function(params){
+    this.tasks.sort(function (a, b) {
+      return a.value - b.value;
+    })
   }
 
 }
