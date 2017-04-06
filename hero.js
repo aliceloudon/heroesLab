@@ -6,9 +6,16 @@ var Hero = function(name, health, favouriteFood){
 }
 
 Hero.prototype = {
+  
   talk: function(){
     return "Hey there, I'm", this.name
+  },
+
+  eat: function(food){
+    this.health = this.health + food.replenishmentValue
+    return this.health
   }
+
 }
 
 module.exports = Hero
