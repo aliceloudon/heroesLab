@@ -9,6 +9,7 @@ describe('hero', function(){
 
   beforeEach(function(){
     hero = new Hero( "Superman", 9001 , "doughnuts" );
+    food = new Food( "doughnuts" , 500 );
     food2 = new Food( "kryptonite" , -1500 );
   })
 
@@ -31,6 +32,11 @@ describe('hero', function(){
   it('is able to eat food', function(){
     hero.eat(food2)
     assert.strictEqual(7501, hero.health)
+  })
+
+  it("eat favurite food = 1.5* value", function(){
+    hero.eat(food)
+    assert.strictEqual(9751, hero.health)
   })
 
 })
