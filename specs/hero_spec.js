@@ -21,4 +21,8 @@ describe('hero', function(){
     assert.strictEqual(hero.favouriteFood, "doughnuts" );
   })
 
+  it('has empty task list', function(){
+    assert.strictEqual(0, hero.tasks.length)
+  })
+
 })
