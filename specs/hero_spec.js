@@ -53,17 +53,11 @@ describe('hero', function(){
   })
 
   it('can sort tasks by difficulty', function(){
-    hero.addTask(task)
     hero.addTask(task2)
+    hero.addTask(task)
     hero.addTask(task3)
-    console.log(task)
-    console.log(task2)
-    console.log(task3)
-    assert.deepEqual( 0 , hero.sortTasks(tasks))
-
-      // [ Task { difficulty: 2, urgency: 7, reward: 1000, completed: false },
-      // Task { difficulty: 8, urgency: 8, reward: 3000, completed: false },
-      // Task { difficulty: 4, urgency: 6, reward: 2000, completed: false } ] 
+    hero.sortTasks()
+    assert.deepEqual(task, hero.tasks[0])
   })
 
 })
