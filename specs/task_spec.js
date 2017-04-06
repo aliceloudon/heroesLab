@@ -13,4 +13,16 @@ describe('task', function(){
     assert.strictEqual(2, task.difficulty)
   })
 
+  it('has an urgency level', function(){
+    assert.strictEqual(7, task.urgency)
+  })
+
+  it('has an reward', function(){
+    assert.strictEqual(1000, task.reward)
+  })
+
+  it('has a completion status', function(){
+    assert.strictEqual(false, task.completed)
+  })
+
 })
